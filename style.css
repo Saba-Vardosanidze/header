@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f6f7f9;
+}
+header {
+  width: 100%;
+  height: 124px;
+  position: fixed;
+  background-color: white;
+}
+.main-container {
+  max-width: 1440px;
+  height: 124px;
+  display: flex;
+  margin: 0 auto;
+  background-color: white;
+  justify-content: space-between;
+}
+.logo-search-container {
+  display: flex;
+  align-items: center;
+}
+.logo-container {
+  margin-right: 64px;
+}
+.Search-main-container input {
+  width: 400px;
+  height: 44px;
+  border-radius: 70px;
+  padding: 0px 64px;
+  outline: none;
+  border: 1px solid #c3d4e940;
+  transition: width 500ms;
+}
+.Search-main-container {
+  position: relative;
+  /* default საძიებო ველის აიქონები გავაქრე */
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  width: 24px;
+  height: 24px;
+  transform: translate(0, -50%);
+  rotate: 90deg;
+}
+.x-icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  width: 24px;
+  height: 24px;
+  transform: translate(0, -50%);
+  visibility: hidden;
+  opacity: 0;
+  rotate: 90deg;
+  transition: 500ms;
+}
+.filter-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+input:focus,
+input:not(:placeholder-shown) {
+  width: 491px;
+}
+.Search-main-container:has(input:placeholder-shown) .search-icon {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.Search-main-container:has(input:not(placeholder-shown)) .search-icon {
+  opacity: 0;
+  visibility: hidden;
+  rotate: 0deg;
+}
+.Search-main-container:has(input:not(:placeholder-shown)) .x-icon {
+  visibility: visible;
+  opacity: 1;
+  rotate: 0deg;
+}
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.header-right-side-settings button {
+  all: unset;
+}
+.header-right-side-settings {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.list-container {
+  border-radius: 90px;
+  border: 1px solid #c3d4e940;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  padding: 10px;
+}
+.navigation-img {
+  height: 24px;
+  width: 24px;
+}
+.settings-img {
+  height: 22px;
+  width: 22px;
+}
+.notification-bell {
+  position: relative;
+}
+.notification-red-signify {
+  position: absolute;
+  left: 28px;
+  bottom: 27px;
+}
